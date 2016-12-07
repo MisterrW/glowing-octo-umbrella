@@ -1,3 +1,3 @@
-class Item {
+public interface Item {
   
 }
