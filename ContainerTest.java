@@ -1,27 +1,23 @@
-// import static org.junit.Assert.assertEquals;
-// import org.junit.*;
+import static org.junit.Assert.assertEquals;
+import org.junit.*;
 
-// public class ContainerTest {
-//   Container container;
-//   Item item;
+public class ContainerTest {
+  Container container;
+  Coin coin;
+  Note note;
 
-//   @Before
-//   public void before() {
-//     container = new Container("box");
-//     item = new Coin();
-//   }
+  @Before
+  public void before() {
+    container = new Container("box");
+    coin = new Coin();
+    note = new Note();
+  }
 
-//   @Test
-//   public void canAddItems() {
-//     container.addToContents(item);
-//     assertEquals(1, container.contentsCount());
-//   }
+  @Test
+  public void canAddItems() {
+    container.addToContents(coin);
+    container.addToContents(note);
+    assertEquals(2, container.contentsCount());
+  }
 
-//   @Test
-//   public void maxItems5() {
-//     for (int i = 0; i < 8; i++) {
-//       container.addToContents(item);
-//     }
-//     assertEquals(5, container.contentsCount());
-//   }
-// }
+}
