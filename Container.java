@@ -6,6 +6,7 @@ class Container {
 
   public Container(String name) {
     this.name = name;
+    this.contents = new ArrayList<Item>();
   }
 
   public int contentsCount() {
